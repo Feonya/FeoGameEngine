@@ -1,0 +1,56 @@
+/* global
+glMatrix
+*/
+
+"use strict";
+
+function Light() {
+    this.mColor = glMatrix.vec4.fromValues(0.1, 0.1, 0.1, 1); // light color
+    this.mPosition = glMatrix.vec3.fromValues(0, 0, 5); // light position in wc
+    this.mRadius = 10; // effective radius in wc
+    this.mIsOn = true;
+}
+
+Light.prototype.setColor = function (c) {
+    this.mColor = glMatrix.vec4.clone(c);
+};
+
+Light.prototype.getColor = function () {
+    return this.mColor;
+};
+
+Light.prototype.set2DPosition = function (p) {
+    this.mPosition = glMatrix.vec3.fromValues(p[0], p[1], this.mPosition[2]);
+};
+
+Light.prototype.setXPos = function (x) {
+    this.mPosition[0] = x;
+};
+
+Light.prototype.setYPos = function (y) {
+    this.mPosition[1] = y;
+};
+
+Light.prototype.setZPos = function (z) {
+    this.mPosition[2] = z;
+};
+
+Light.prototype.getPosition = function () {
+    return this.mPosition;
+};
+
+Light.prototype.setRadius = function (r) {
+    this.mRadius = r;
+};
+
+Light.prototype.getRadius = function () {
+    return this.mRadius;
+};
+
+Light.prototype.setLightTo = function (isOn) {
+    this.mIsOn = isOn;
+};
+
+Light.prototype.isLightOn = function () {
+    return this.mIsOn;
+};

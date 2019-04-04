@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Overview of Illumination and GLSL Implementation</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    </head>
+    <body onload="
+        var myGame = new MyGame();
+        gEngine.Core.initializeEngineCore('GLCanvas', myGame);
+    ">
+        <canvas id="GLCanvas" width="640" height="480">
+            您的浏览器不支持 HTML5 Canvas。
+        </canvas>
+        <!-- 引擎脚本 -->
+        <script type="text/javascript" src="src/Engine/Core/Engine_Core.js"></script>
+        <script type="text/javascript" src="src/Engine/Core/Engine_VertexBuffer.js"></script>
+        <script type="text/javascript" src="src/Engine/Core/Engine_GameLoop.js"></script>
+        <script type="text/javascript" src="src/Engine/Core/Engine_Input.js"></script>
+        <script type="text/javascript" src="src/Engine/Core/Resources/Engine_Fonts.js"></script>
+        <script type="text/javascript" src="src/Engine/Core/Resources/Engine_ResourceMap.js"></script>
+        <script type="text/javascript" src="src/Engine/Core/Resources/Engine_TextFileLoader.js"></script>
+        <script type="text/javascript" src="src/Engine/Core/Resources/Engine_DefaultResources.js"></script>
+        <script type="text/javascript" src="src/Engine/Core/Resources/Engine_AudioClips.js"></script>
+        <script type="text/javascript" src="src/Engine/Core/Resources/Engine_Textures.js"></script>
+        <script type="text/javascript" src="src/Engine/Shaders/SimpleShader.js"></script>
+        <script type="text/javascript" src="src/Engine/Shaders/TextureShader.js"></script>
+        <script type="text/javascript" src="src/Engine/Shaders/SpriteShader.js"></script>
+        <script type="text/javascript" src="src/Engine/Shaders/LightShader.js"></script>
+        <script type="text/javascript" src="src/Engine/Renderables/Renderable.js"></script>
+        <script type="text/javascript" src="src/Engine/Renderables/TextureRenderable.js"></script>
+        <script type="text/javascript" src="src/Engine/Renderables/TextureRenderable_PixelCollision.js"></script>
+        <script type="text/javascript" src="src/Engine/Renderables/SpriteRenderable.js"></script>
+        <script type="text/javascript" src="src/Engine/Renderables/SpriteRenderable_PixelCollision.js"></script>
+        <script type="text/javascript" src="src/Engine/Renderables/SpriteAnimateRenderable.js"></script>
+        <script type="text/javascript" src="src/Engine/Renderables/FontRenderable.js"></script>
+        <script type="text/javascript" src="src/Engine/Renderables/LightRenderable.js"></script>
+        <script type="text/javascript" src="src/Engine/GameObjects/GameObject.js"></script>
+        <script type="text/javascript" src="src/Engine/GameObjects/GameObject_PixelCollision.js"></script>
+        <script type="text/javascript" src="src/Engine/GameObjects/GameObjectSet.js"></script>
+        <script type="text/javascript" src="src/Engine/Utils/BoundingBox.js"></script>
+        <script type="text/javascript" src="src/Engine/Utils/Transform.js"></script>
+        <script type="text/javascript" src="src/Engine/Utils/Interpolate.js"></script>
+        <script type="text/javascript" src="src/Engine/Utils/InterpolateVec2.js"></script>
+        <script type="text/javascript" src="src/Engine/Utils/ShakePosition.js"></script>
+        <script type="text/javascript" src="src/MyGame/Objects/DyePack.js"></script>
+        <script type="text/javascript" src="src/MyGame/Objects/Minion.js"></script>
+        <script type="text/javascript" src="src/MyGame/Objects/Hero.js"></script>
+        <script type="text/javascript" src="src/MyGame/Objects/Brain.js"></script>
+        <script type="text/javascript" src="src/MyGame/Objects/TextureObject.js"></script>
+        <script type="text/javascript" src="src/Engine/Cameras/Camera.js"></script>
+        <script type="text/javascript" src="src/Engine/Cameras/CameraState.js"></script>
+        <script type="text/javascript" src="src/Engine/Cameras/CameraShake.js"></script>
+        <script type="text/javascript" src="src/Engine/Cameras/Camera_Manipulation.js"></script>
+        <script type="text/javascript" src="src/Engine/Cameras/Camera_Input.js"></script>
+        <script type="text/javascript" src="src/Engine/Cameras/Camera_Xform.js"></script>
+        <script type="text/javascript" src="src/Engine/Lights/Lights.js"></script>
+        <script type="text/javascript" src="src/Engine/Scene.js"></script>
+        <!-- 外部脚本 -->
+        <script type="text/javascript" src="src/lib/gl-matrix.js"></script>
+        <!-- 游戏脚本 -->
+        <script type="text/javascript" src="src/MyGame/Util/SceneFileParser.js"></script>
+        <script type="text/javascript" src="src/MyGame/MyGame.js"></script>
+        <script type="text/javascript" src="src/MyGame/BlueLevel.js"></script>
+        <script type="text/javascript" src="src/MyGame/GameOver.js"></script>
+    </body>
+</html>

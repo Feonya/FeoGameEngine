@@ -1,0 +1,8 @@
+After completing this chapter, I will be able to：
+    1、Understand the parameters of simple illumination models
+    2、Define infrastructure supports for working with multiple light sources
+    3、Understand the basics of diffuse reflection and normal mapping
+    4、Understand the basics of specular reflection and the Phong illumination model
+    5、Implement GLSL shaders to simulate diffuse and specular reflection and the Phong
+    6、Create and manipulate point, directional, and spotlights
+    7、Simulate shadows with the WebGL stencil buffer
