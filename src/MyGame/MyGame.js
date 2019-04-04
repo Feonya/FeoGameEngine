@@ -118,9 +118,6 @@ MyGame.prototype.update = function () {
         }
     }
 
-    /**
-     * @TODO 键代码未设置
-     */
     var p = this.mTheLight.getPosition(), r;
     if (gEngine.Input.isKeyPressed(gEngine.Input.keys.Z)) {
         p[2] += deltaZ;

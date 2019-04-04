@@ -87,6 +87,7 @@ gEngine.Input = (function (){
         //字母键（A: 65 - Z: 90）
         A: 65,
         B: 66,
+        C: 67,
         D: 68,
         E: 69,
         F: 70,
@@ -102,7 +103,10 @@ gEngine.Input = (function (){
         Q: 81,
         R: 82,
         S: 83,
+        V: 86,
         W: 87,
+        X: 88,
+        Z: 90,
 
         LastKeyCode: 222
     };
