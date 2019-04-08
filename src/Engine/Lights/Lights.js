@@ -7,7 +7,9 @@ glMatrix
 function Light() {
     this.mColor = glMatrix.vec4.fromValues(0.1, 0.1, 0.1, 1); // light color
     this.mPosition = glMatrix.vec3.fromValues(0, 0, 5); // light position in wc
-    this.mRadius = 10; // effective radius in wc
+    this.mNear = 5; // within near is fully lighted
+    this.mFar = 10; // farther than far is not lighted
+    this.mIntensity = 1;
     this.mIsOn = true;
 }
 
@@ -39,18 +41,34 @@ Light.prototype.getPosition = function () {
     return this.mPosition;
 };
 
-Light.prototype.setRadius = function (r) {
-    this.mRadius = r;
-};
-
-Light.prototype.getRadius = function () {
-    return this.mRadius;
-};
-
 Light.prototype.setLightTo = function (isOn) {
     this.mIsOn = isOn;
 };
 
 Light.prototype.isLightOn = function () {
     return this.mIsOn;
+};
+
+Light.prototype.setNear = function (r) {
+    this.mNear = r;
+};
+
+Light.prototype.getNear = function () {
+    return this.mNear;
+};
+
+Light.prototype.setFar = function (r) {
+    this.mFar = r;
+};
+
+Light.prototype.getFar = function () {
+    return this.mFar;
+};
+
+Light.prototype.setIntensity = function (i) {
+    this.mIntensity = i;
+};
+
+Light.prototype.getIntensity = function () {
+    return this.mIntensity;
 };
